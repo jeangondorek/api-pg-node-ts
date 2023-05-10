@@ -1,8 +1,8 @@
 # api-pg-node-ts
 
 Tecnologias usadas
-- Express
-- Typescript
+
+[![My Skills](https://skillicons.dev/icons?i=nodejs,typescript,express&perline=3)](https://skillicons.dev)
 
 ### Rodar projeto
 
