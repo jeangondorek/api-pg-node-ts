@@ -5,8 +5,8 @@
   "author": "jean canova",
   "license": "MIT",
   "scripts": {
-    "start": "ts-node-dev src/index.ts",
-    "dev": "ts-node-dev src/index.ts"
+    "start": "ts-node-dev src/Index.ts",
+    "dev": "ts-node-dev src/Index.ts"
   },
   "dependencies": {
     "dotenv": "^16.0.3",

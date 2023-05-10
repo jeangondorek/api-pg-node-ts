@@ -2,7 +2,7 @@ import express from 'express';
 
 import 'dotenv/config';
 
-import { router } from './routes';
+import { router } from './routes/RoutesIndex';
 
 const server = express();
 
