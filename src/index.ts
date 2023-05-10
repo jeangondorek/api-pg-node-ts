@@ -1,4 +1,4 @@
-import { server } from "./server/Server";
+import { server } from './server/Server';
 
 const port = 3333;
 
