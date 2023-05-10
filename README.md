@@ -1,21 +1,29 @@
 # api-pg-node-ts
 
-Packages
+Tecnologias usadas
 - Express
 - Typescript
 
 ### Rodar projeto
 
-```yarn install```
-```yarn start```
+```bash
+yarn install
+```
+```bash
+yarn start
+```
 
 #### Gerando build
 
-```yarn tsc```
+```bash
+yarn tsc
+```
 
 ##### Configurando eslint:
 
-```npx eslint --init```
+```bash
+npx eslint --init
+```
 
 ##### Extensões VSCODE
 
