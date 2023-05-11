@@ -2,7 +2,7 @@
 
 Tecnologias usadas
 
-[![My Skills](https://skillicons.dev/icons?i=nodejs,typescript,express&perline=3)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=nodejs,typescript,express,postgres&perline=4)](https://skillicons.dev)
 
 ### Rodar projeto
 
