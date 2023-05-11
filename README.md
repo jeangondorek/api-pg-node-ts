@@ -39,10 +39,12 @@ npx eslint --init
            📁  controllers
                 📁 pastas de controllers
             📁 database
+                📁 seeds
+                📁 models
+                📁 migrations
+                📁 providers
                 📁 knex
                     📁 @types
-                📁 seeds
-                📁 migrations
            📁 routes
            📁  shared
                📁 middlewares
@@ -63,4 +65,5 @@ npx eslint --init
 - knex - query builder para facilitar criação de bancos de dados
   - @types - ajuda a definir o tipo de dado para o banco
 - seeds -
+- models - contém os modelos de dados
 - migrations - comandos/funções executadas no banco de dados
