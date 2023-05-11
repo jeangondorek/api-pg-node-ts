@@ -5,11 +5,32 @@ describe('Cidades - Get by Id', () => {
 
 	it('Get by id registro', async ()=> {
 
+		const res2 = await testServer
+			.post('/cidades')
+			.send({ nome: 'Caxias'});
+
+		expect(res2.statusCode).toEqual(StatusCodes.CREATED);
+
 		const res1 = await testServer
-			.get('/cidades/1');
+			.get(`/cidades/${res2.body}`);
 
 		expect(res1.statusCode).toEqual(StatusCodes.OK);
-		expect(typeof res1.body).toEqual('number');
+		expect(res1.body).toHaveProperty('nome');
+	});
+
+	it('Get by id de registro que não existe', async ()=> {
+
+		const res2 = await testServer
+			.post('/cidades')
+			.send({ nome: 'Caxias'});
+
+		expect(res2.statusCode).toEqual(StatusCodes.CREATED);
+
+		const res1 = await testServer
+			.get('/cidades/99999999').send();
+
+		expect(res1.statusCode).toEqual(StatusCodes.INTERNAL_SERVER_ERROR);
+		expect(res1.body).toHaveProperty('errors.default');
 	});
 });
 

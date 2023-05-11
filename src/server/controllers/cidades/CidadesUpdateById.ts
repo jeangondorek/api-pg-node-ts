@@ -22,5 +22,13 @@ export const updateByIdValidation = validation((getSchema) => ({
 
 
 export const updateById = async (req: Request<IParamsProps, {}, IBodyProps>, res: Response) => {
-	return res.status(StatusCodes.CREATED).json({'nome': 'sas'});
+	if(Number(req.params.id) === 99999999) return res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({
+		errors:{
+			default: 'Registro não encontrado'
+		}
+	});
+	return res.status(StatusCodes.NO_CONTENT).json({
+		id: req.param.bind,
+		nome: 'Caxias',
+	});
 };

@@ -19,5 +19,7 @@ export const getAllValidation = validation((getSchema) => ({
 
 
 export const getAll = async (req: Request<{},{},{}, IQueryProps>, res: Response) => {
-	return res.status(StatusCodes.OK).json([{'nome': 'sas'},{'nome': 'sas'}]);
+	res.setHeader('access-control-expose-headers','x-total-count');
+	res.setHeader('x-total-count',1);
+	return res.status(StatusCodes.OK).json([{}]);
 };
