@@ -35,15 +35,15 @@ npx eslint --init
 
 ```bash
    📁 src
-        📓 arquivos
         📁 server
-           📓 arquivos
            📁  controllers
-                📓 arquivos
+                📁 pastas de controllers
             📁 database
-                📓 arquivos
+                📁 knex
+                    📁 @types
+                📁 seeds
+                📁 migrations
            📁 routes
-                📓 arquivos
            📁  shared
                📁 middlewares
                📁 services
@@ -60,3 +60,7 @@ npx eslint --init
 - shared --pasta com arquivos com funções “globais”
 - middlewares --pasta com arquivos para um mediador ex: autenticação
 - services --pasta com arquivos para um serviço que possa ser reaproveitado, ex: criptografia de senhas
+- knex - query builder para facilitar criação de bancos de dados
+  - @types - ajuda a definir o tipo de dado para o banco
+- seeds -
+- migrations - comandos/funções executadas no banco de dados
