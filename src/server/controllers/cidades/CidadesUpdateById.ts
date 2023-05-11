@@ -28,7 +28,7 @@ export const updateById = async (req: Request<IParamsProps, {}, IBodyProps>, res
 		}
 	});
 	return res.status(StatusCodes.NO_CONTENT).json({
-		id: req.param.bind,
+		id: req.params,
 		nome: 'Caxias',
 	});
 };

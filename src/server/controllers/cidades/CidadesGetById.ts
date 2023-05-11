@@ -22,7 +22,7 @@ export const getById = async (req: Request<IParamsProps>, res: Response) => {
 		}
 	});
 	return res.status(StatusCodes.OK).json({
-		id: req.param.bind,
+		id: req.params,
 		nome: 'Caxias',
 	});
 };
