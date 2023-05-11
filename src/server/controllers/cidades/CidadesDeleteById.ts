@@ -15,5 +15,5 @@ export const deleteByIdValidation = validation((getSchema) => ({
 
 
 export const deleteById = async (req: Request<IParamsProps>, res: Response) => {
-	return res.status(StatusCodes.INTERNAL_SERVER_ERROR).send('NOT IMPLEMENTED!');
+	return res.status(StatusCodes.ACCEPTED).send('Registro excluído!');
 };

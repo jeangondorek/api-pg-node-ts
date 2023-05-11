@@ -22,5 +22,5 @@ export const updateByIdValidation = validation((getSchema) => ({
 
 
 export const updateById = async (req: Request<IParamsProps, {}, IBodyProps>, res: Response) => {
-	return res.status(StatusCodes.INTERNAL_SERVER_ERROR).send('NOT IMPLEMENTED!');
+	return res.status(StatusCodes.CREATED).json({'nome': 'sas'});
 };

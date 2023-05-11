@@ -15,5 +15,5 @@ export const getByIdValidation = validation((getSchema) => ({
 
 
 export const getById = async (req: Request<IParamsProps>, res: Response) => {
-	return res.status(StatusCodes.INTERNAL_SERVER_ERROR).send('NOT IMPLEMENTED!');
+	return res.status(StatusCodes.OK).json(1);
 };

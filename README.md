@@ -4,11 +4,12 @@ Tecnologias usadas
 
 [![My Skills](https://skillicons.dev/icons?i=nodejs,typescript,express,postgres&perline=4)](https://skillicons.dev)
 
-### Rodar projeto
+### Rodar projeto 
 
 ```bash
 yarn install
 ```
+
 ```bash
 yarn start
 ```
@@ -19,7 +20,7 @@ yarn start
 yarn tsc
 ```
 
-##### Configurando eslint:
+##### Configurando eslint
 
 ```bash
 npx eslint --init
@@ -32,7 +33,7 @@ npx eslint --init
 
 ### Arquitetura
 
-```
+```bash
    📁 src
         📓 arquivos
         📁 server
