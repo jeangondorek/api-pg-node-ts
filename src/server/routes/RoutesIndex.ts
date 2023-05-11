@@ -1,5 +1,4 @@
 import { Router } from 'express';
-import {StatusCodes} from 'http-status-codes';
 import { CidadesController } from './../controllers/ControllersIndex';
 
 const router = Router();
@@ -12,7 +11,7 @@ router.get('/', (req, res)=>{
 router.get('/cidades', CidadesController.getAll);
 router.get('/cidades/:id', CidadesController.getById);*/
 
-router.post('/cidades', CidadesController.create);
+router.post('/cidades', CidadesController.createValidation, CidadesController.create);
 
 /*
 router.put('/cidades/:id', CidadesController.updateById);
