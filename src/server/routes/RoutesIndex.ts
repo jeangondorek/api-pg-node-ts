@@ -7,14 +7,10 @@ router.get('/', (req, res)=>{
 	return res.send('ONLINE!');
 });
 
-/*
-router.get('/cidades', CidadesController.getAll);
-router.get('/cidades/:id', CidadesController.getById);*/
-
+router.get('/cidades', CidadesController.getAllValidation, CidadesController.getAll);
 router.post('/cidades', CidadesController.createValidation, CidadesController.create);
-
-/*
-router.put('/cidades/:id', CidadesController.updateById);
-router.delete('/cidades/:id', CidadesController.deleteById);*/
+router.get('/cidades/:id', CidadesController.getByIdValidation, CidadesController.getById);
+router.put('/cidades/:id', CidadesController.updateByIdValidation, CidadesController.updateById);
+router.delete('/cidades/:id', CidadesController.deleteByIdValidation, CidadesController.deleteById);
 
 export {router};
