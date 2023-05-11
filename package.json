@@ -7,6 +7,9 @@
   "scripts": {
     "start": "ts-node-dev src/Index.ts",
     "dev": "ts-node-dev src/Index.ts",
+    "build": "tsc",
+    "postinstall": "tsc",
+    "production": "node ./build/Index.js",
     "test": "jest"
   },
   "dependencies": {
@@ -28,5 +31,8 @@
     "supertest": "^6.3.3",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.0.4"
+  },
+  "engines": {
+    "node": "16.x"
   }
 }
