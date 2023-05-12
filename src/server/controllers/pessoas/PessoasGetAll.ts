@@ -2,7 +2,7 @@ import {Request, Response} from 'express';
 import * as yup from 'yup';
 import { validation } from '../../shared/middleware/Validation';
 import { StatusCodes } from 'http-status-codes';
-import { CidadesProvider } from '../../database/providers/cidades/CidadesIndexProvider';
+import { PessoasProvider } from '../../database/providers/pessoas/PessoasIndexProvider';
 
 interface IQueryProps{
 	id?: number;
@@ -22,8 +22,8 @@ export const getAllValidation = validation((getSchema) => ({
 
 
 export const getAll = async (req: Request<{},{},{}, IQueryProps>, res: Response) => {
-	const result = await CidadesProvider.getAllCidades(req.query.page || 1, req.query.limit || 7, req.query.filter || '', Number(req.query.id));
-	const count = await CidadesProvider.count(req.query.filter);
+	const result = await PessoasProvider.getAllPessoas(req.query.page || 1, req.query.limit || 7, req.query.filter || '');
+	const count = await PessoasProvider.count(req.query.filter);
 	if(result instanceof Error){
 		return res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({
 			errors:{default:result.message}
