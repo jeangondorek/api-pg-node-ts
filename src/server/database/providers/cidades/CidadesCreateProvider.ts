@@ -2,7 +2,7 @@ import { ETablesNames } from '../../ETableNames';
 import { Knex } from '../../knex/KnexIndex';
 import { ICidade } from '../../models/CidadeModel';
 
-export const create = async (cidade: Omit<ICidade, 'id'>): Promise<number|Error> => {
+export const createCidades = async (cidade: Omit<ICidade, 'id'>): Promise<number|Error> => {
 	try {
 		const[result] = await Knex(ETablesNames.cidade).insert(cidade).returning('id');
 
@@ -12,9 +12,9 @@ export const create = async (cidade: Omit<ICidade, 'id'>): Promise<number|Error>
 			return result;
 		}
             
-		return new Error('Erro ao realizar cadastro na cidade');
+		return new Error('Erro ao realizar cadastro da cidade');
 
 	} catch (error) {
-		return new Error('Erro ao realizar cadastro na cidade');
+		return new Error('Erro no cadastro da cidade');
 	}
 };
