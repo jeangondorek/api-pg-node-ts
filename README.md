@@ -64,6 +64,6 @@ npx eslint --init
 - services --pasta com arquivos para um serviço que possa ser reaproveitado, ex: criptografia de senhas
 - knex - query builder para facilitar criação de bancos de dados
   - @types - ajuda a definir o tipo de dado para o banco
-- seeds -
+- seeds - contém arquivos para facilitar criação de dados no banco
 - models - contém os modelos de dados
 - migrations - comandos/funções executadas no banco de dados
