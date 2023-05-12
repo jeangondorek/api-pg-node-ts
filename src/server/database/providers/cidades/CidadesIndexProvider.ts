@@ -3,6 +3,7 @@ import * as getAllCidades from './CidadesGetAllProvider';
 import * as getByIdCidades from './CidadesGetByIdProvider';
 import * as updateByIdCidades from './CidadesUpdateByIdProvider';
 import * as deleteByIdCidades from './CidadesDeleteByIdProvider';
+import * as count from './Count';
 
 export const CidadesProvider = {
 	...createCidades,
@@ -10,4 +11,5 @@ export const CidadesProvider = {
 	...getByIdCidades,
 	...updateByIdCidades,
 	...deleteByIdCidades,
+	...count,
 };
