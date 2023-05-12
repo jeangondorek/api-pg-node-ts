@@ -51,9 +51,6 @@ npx eslint --init
                📁 services
 ```
 
-📁 representa pastas
-📓 representa arquivos
-
 - src --pasta geral do projeto com arquivo principal para rodar o projeto
 - server --pasta geral com toda a parte do back-end, com arquivo que roda o servidor do projeto
 - controllers --pasta com arquivos com funções de resposta e/ou edição de dados
