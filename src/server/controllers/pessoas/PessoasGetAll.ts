@@ -5,7 +5,6 @@ import { StatusCodes } from 'http-status-codes';
 import { PessoasProvider } from '../../database/providers/pessoas/PessoasIndexProvider';
 
 interface IQueryProps{
-	id?: number;
 	page?: number;
 	limit?: number;
 	filter?: string;
@@ -13,7 +12,6 @@ interface IQueryProps{
 
 export const getAllValidation = validation((getSchema) => ({
 	query: getSchema<IQueryProps>(yup.object().shape({
-		id: yup.number().integer().default(0),
 		page: yup.number().moreThan(0),
 		limit: yup.number().moreThan(0),
 		filter: yup.string(),
