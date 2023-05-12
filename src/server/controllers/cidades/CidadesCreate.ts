@@ -15,7 +15,7 @@ export const createValidation = validation((getSchema) => ({
 
 
 export const create = async (req: Request<{},{},IBodyProps>, res: Response) => {
-	const result = await CidadesProvider.create(req.body);
+	const result = await CidadesProvider.createCidades(req.body);
 	if(result instanceof Error){
 		return res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({
 			errors: {

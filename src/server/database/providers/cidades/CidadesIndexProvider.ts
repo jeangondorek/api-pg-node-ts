@@ -1,13 +1,13 @@
-import * as create from './CidadesCreateProvider';
-//import * as getAll from './CidadesGetAll';
-//import * as getById from './CidadesGetById';
-//import * as updateById from './CidadesUpdateById';
-//import * as deleteById from './CidadesDeleteById';
+import * as createCidades from './CidadesCreateProvider';
+import * as getAllCidades from './CidadesGetAllProvider';
+import * as getByIdCidades from './CidadesGetByIdProvider';
+import * as updateByIdCidades from './CidadesUpdateByIdProvider';
+import * as deleteByIdCidades from './CidadesDeleteByIdProvider';
 
 export const CidadesProvider = {
-	...create,
-//	...getAll,
-//	...getById,
-//	...updateById,
-//	...deleteById,
+	...createCidades,
+	...getAllCidades,
+	...getByIdCidades,
+	...updateByIdCidades,
+	...deleteByIdCidades,
 };
