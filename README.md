@@ -2,13 +2,14 @@
 
 Tecnologias usadas
 
-[![My Skills](https://skillicons.dev/icons?i=nodejs,typescript,express,postgres&perline=4)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=nodejs,typescript,express,postgres,sqlite&perline=5)](https://skillicons.dev)
 
-### Rodar projeto
+### Rodar projeto 
 
 ```bash
 yarn install
 ```
+
 ```bash
 yarn start
 ```
@@ -19,7 +20,7 @@ yarn start
 yarn tsc
 ```
 
-##### Configurando eslint:
+##### Configurando eslint
 
 ```bash
 npx eslint --init
@@ -32,17 +33,19 @@ npx eslint --init
 
 ### Arquitetura
 
-```
+```bash
    📁 src
-        📓 arquivos
         📁 server
-           📓 arquivos
            📁  controllers
-                📓 arquivos
+                📁 pastas de controllers
             📁 database
-                📓 arquivos
+                📁 seeds
+                📁 models
+                📁 migrations
+                📁 providers
+                📁 knex
+                    📁 @types
            📁 routes
-                📓 arquivos
            📁  shared
                📁 middlewares
                📁 services
@@ -59,3 +62,8 @@ npx eslint --init
 - shared --pasta com arquivos com funções “globais”
 - middlewares --pasta com arquivos para um mediador ex: autenticação
 - services --pasta com arquivos para um serviço que possa ser reaproveitado, ex: criptografia de senhas
+- knex - query builder para facilitar criação de bancos de dados
+  - @types - ajuda a definir o tipo de dado para o banco
+- seeds -
+- models - contém os modelos de dados
+- migrations - comandos/funções executadas no banco de dados
