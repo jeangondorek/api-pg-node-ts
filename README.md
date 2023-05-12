@@ -2,6 +2,9 @@
 
 Tecnologias usadas
 
+
+[![Node.js Package](https://github.com/jeangondorek/api-pg-node-ts/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/jeangondorek/api-pg-node-ts/actions/workflows/npm-publish.yml)
+
 [![My Skills](https://skillicons.dev/icons?i=nodejs,typescript,express,postgres,sqlite&perline=5)](https://skillicons.dev)
 
 ### Rodar projeto 
