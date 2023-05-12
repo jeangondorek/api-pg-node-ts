@@ -1,9 +1,9 @@
 # api-pg-node-ts
 
-Tecnologias usadas
-
-
+![Coverage](./coverage/badges.svg)
 [![NodeJS with Webpack](https://github.com/jeangondorek/api-pg-node-ts/actions/workflows/webpack.yml/badge.svg)](https://github.com/jeangondorek/api-pg-node-ts/actions/workflows/webpack.yml)
+
+Tecnologias usadas
 
 [![My Skills](https://skillicons.dev/icons?i=nodejs,typescript,express,postgres,sqlite&perline=5)](https://skillicons.dev)
 
