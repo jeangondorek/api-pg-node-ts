@@ -5,9 +5,7 @@ export default {
 	coverageDirectory: 'coverage',
 	coverageProvider: 'v8',
 	coverageReporters: [
-		'lcov',
-		'json-summary',
-		'html'
+		'json',
 	],
 	collectCoverageFrom: [
 		'<rootDir>/packages/**/*.{tsx,ts}',
