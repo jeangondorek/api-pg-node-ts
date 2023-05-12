@@ -1,6 +1,6 @@
 # api-pg-node-ts
 
-![Coverage](./coverage/badges.svg)
+![Coverage](./badges.svg)
 [![NodeJS with Webpack](https://github.com/jeangondorek/api-pg-node-ts/actions/workflows/webpack.yml/badge.svg)](https://github.com/jeangondorek/api-pg-node-ts/actions/workflows/webpack.yml)
 
 Tecnologias usadas
