@@ -4,11 +4,11 @@ import { Knex } from '../../src/server/database/knex/KnexIndex';
 
 beforeAll(async () => {
 	await Knex.migrate.latest();
-  });
+});
   
-  afterAll(async () => {
+afterAll(async () => {
 	await Knex.destroy();
-  });
+});
 
 describe('Cidades - Get All', () => {
 

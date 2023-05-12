@@ -3,11 +3,11 @@ import { testServer } from '../jest.setup';
 import { Knex } from '../../src/server/database/knex/KnexIndex';
 
 beforeAll(async () => {
-  await Knex.migrate.latest();
+	await Knex.migrate.latest();
 });
 
 afterAll(async () => {
-  await Knex.destroy();
+	await Knex.destroy();
 });
 
 
