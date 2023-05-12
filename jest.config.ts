@@ -5,7 +5,13 @@ export default {
 	coverageDirectory: 'coverage',
 	coverageProvider: 'v8',
 	coverageReporters: [
-		'json'
+		'lcov',
+		'json-summary',
+		'html'
+	],
+	collectCoverageFrom: [
+		'<rootDir>/packages/**/*.{tsx,ts}',
+		'!**/*.{js,d.ts}'
 	],
 	setupFiles: [
 		'./tests/jest.setup.ts'
