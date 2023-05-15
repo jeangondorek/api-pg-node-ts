@@ -12,16 +12,25 @@ afterAll(async () => {
 });
 
 describe('Cidades - Get All', () => {
+	let accessToken = '';
+	beforeAll(async () => {
+		const email = 'create-cidades@gmail.com';
+		await testServer.post('/cadastrar').send({
+			nome: 'teste', email, senha: '1234567'
+		});
+		const singInRes = await testServer.post('/entrar').send({email, senha: '1234567'});
 
+		accessToken = singInRes.body.accessToken;
+	});
 	it('Get all registers', async ()=> {
 		const res1 = await testServer
-			.post('/cidades')
+			.post('/cidades').set({Authorization: `Bearer ${accessToken}`})
 			.send({ nome: 'Caxias'});
 
 		expect(res1.statusCode).toEqual(StatusCodes.CREATED);
 
 		const res2 = await testServer
-			.get('/cidades').send();
+			.get('/cidades').set({Authorization: `Bearer ${accessToken}`}).send();
 
 			
 		expect(Number(res2.header['x-total-count'])).toBeGreaterThan(0);

@@ -14,10 +14,23 @@ afterAll(async () => {
 
 describe('Cidades - Create', () => {
 
+	let accessToken = '';
+	beforeAll(async () => {
+		const email = 'create-cidades@gmail.com';
+		await testServer.post('/cadastrar').send({
+			nome: 'teste', email, senha: '1234567'
+		});
+		const singInRes = await testServer.post('/entrar').send({email, senha: '1234567'});
+
+		accessToken = singInRes.body.accessToken;
+	});
+	
+
 	it('Cria registro', async ()=> {
 
 		const res1 = await testServer
 			.post('/cidades')
+			.set({Authorization: `Bearer ${accessToken}`})
 			.send({ nome: 'Caxias'});
 
 		expect(res1.statusCode).toEqual(StatusCodes.CREATED);
@@ -28,6 +41,7 @@ describe('Cidades - Create', () => {
 
 		const res1 = await testServer
 			.post('/cidades')
+			.set({Authorization: `Bearer ${accessToken}`})
 			.send({ nome: 'Ca'});
 
 		expect(res1.statusCode).toEqual(StatusCodes.BAD_REQUEST);
