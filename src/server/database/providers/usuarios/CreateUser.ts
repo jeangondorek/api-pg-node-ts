@@ -1,10 +1,13 @@
+import { PasswordCryto } from '../../../shared/services/ServicesIndex';
 import { ETablesNames } from '../../ETableNames';
 import { Knex } from '../../knex/KnexIndex';
 import { IUsuario } from '../../models/UsuarioModel';
 
 export const createUsuarios = async (usuario: Omit<IUsuario, 'id'>): Promise<number|Error> => {
 	try {
-		const[result] = await Knex(ETablesNames.usuario).insert(usuario).returning('id');
+		const hashedPassword = await PasswordCryto.hashPassword(usuario.senha);
+
+		const[result] = await Knex(ETablesNames.usuario).insert({...usuario, senha: hashedPassword}).returning('id');
 
 		if(typeof result === 'object'){
 			return result.id;

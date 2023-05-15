@@ -4,6 +4,7 @@ import { validation } from '../../shared/middleware/Validation';
 import { StatusCodes } from 'http-status-codes';
 import { IUsuario } from '../../database/models/UsuarioModel';
 import { UserProvider } from '../../database/providers/usuarios/IndexUser';
+import { JWTService, PasswordCryto } from '../../shared/services/ServicesIndex';
 
 interface IBodyProps extends Omit<IUsuario, 'id'| 'nome'>{}
 
@@ -27,13 +28,24 @@ export const singIn = async (req: Request<{},{},IBodyProps>, res: Response) => {
 		});
 	}
 
-	if(senha !== result.senha){
+	const passwordMatch = await PasswordCryto.verifyPassword(senha, result.senha);
+
+	if(!passwordMatch){
 		return res.status(StatusCodes.UNAUTHORIZED).json({
 			errors: {
 				default: 'email ou senha erradas'
 			}
 		});
 	}else{
-		return res.status(StatusCodes.OK).json({ accessToken: 'aindanaoexiste'});
+
+		const accessToken = JWTService.sign({uid: result.id});
+		if ( accessToken === 'JWT_SECRET_NOT_FOUND' ){
+			return res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({
+				errors: {
+					default: 'erro ao gerar token'
+				}
+			});
+		}
+		return res.status(StatusCodes.OK).json({ accessToken });
 	}
 };

@@ -16,7 +16,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nome\": \"hhh\",\r\n    \"email\": \"hhhhhh\",\r\n    \"senha\": \"hhhhhh\"\r\n}",
+							"raw": "{\r\n    \"nome\": \"Jose\",\r\n    \"email\": \"Jose@Jose.com\",\r\n    \"senha\": \"123456\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -42,7 +42,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email\": \"hhhhhh\",\r\n    \"senha\": \"hhhhhh\"\r\n}",
+							"raw": "{\r\n    \"email\": \"Jose@Jose.com\",\r\n    \"senha\": \"123456\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -72,8 +72,8 @@
 						"method": "POST",
 						"header": [
 							{
-								"key": "auth",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NWE0ODU2NmNiNjcyZmEwYTg0ZmM3ZiIsImlhdCI6MTY4MzYzODM3NSwiZXhwIjoxNjg0MjQzMTc1fQ.qsVjU4pe3-PVjlT6gblYk1Kc46qqc7DkwAvVYIH-uz8",
+								"key": "authorization",
+								"value": "{{auth}}",
 								"type": "text"
 							}
 						],
@@ -173,8 +173,8 @@
 						"method": "GET",
 						"header": [
 							{
-								"key": "auth",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NWE0ODU2NmNiNjcyZmEwYTg0ZmM3ZiIsImlhdCI6MTY4MzYzODM3NSwiZXhwIjoxNjg0MjQzMTc1fQ.qsVjU4pe3-PVjlT6gblYk1Kc46qqc7DkwAvVYIH-uz8",
+								"key": "authorization",
+								"value": "{{auth}}",
 								"type": "text"
 							}
 						],
@@ -209,8 +209,8 @@
 						"method": "GET",
 						"header": [
 							{
-								"key": "auth",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NWE0ODU2NmNiNjcyZmEwYTg0ZmM3ZiIsImlhdCI6MTY4MzYzODM3NSwiZXhwIjoxNjg0MjQzMTc1fQ.qsVjU4pe3-PVjlT6gblYk1Kc46qqc7DkwAvVYIH-uz8",
+								"key": "authorization",
+								"value": "{{auth}}",
 								"type": "text"
 							}
 						],
@@ -538,7 +538,7 @@
 		},
 		{
 			"key": "auth",
-			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NWE1Zjc1M2JmMmJjMzc3NDRlNmUxNSIsImlhdCI6MTY4MzY0NTc3OSwiZXhwIjoxNjg0MjUwNTc5fQ.lIy3ySexx5PMtXQpM2hev17evID0wYXi44gmftMUEzk",
+			"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEsImlhdCI6MTY4NDE2NzMyOSwiZXhwIjoxNjg0MTcwMzI5fQ.ZTcL6yZ02eQwHM32ql2Xm6HTOSdEniIkLH-PCtozADo",
 			"type": "string"
 		}
 	]
