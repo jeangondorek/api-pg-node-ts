@@ -8,11 +8,283 @@
 	"item": [
 		{
 			"name": "Users",
-			"item": []
+			"item": [
+				{
+					"name": "cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Jose\",\r\n    \"email\": \"Jose@Jose.com\",\r\n    \"senha\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/cadastrar",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"cadastrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "entrar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"Jose@Jose.com\",\r\n    \"senha\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/entrar",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"entrar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		},
 		{
 			"name": "Persons",
-			"item": []
+			"item": [
+				{
+					"name": "Post Pessoas Copy",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{auth}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"sss\",\r\n    \"email\": \"asfasf\",\r\n    \"cidadeId\": 14\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/pessoas",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"pessoas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Pessoas by id Copy",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "auth",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NWE0ODU2NmNiNjcyZmEwYTg0ZmM3ZiIsImlhdCI6MTY4MzYzODM3NSwiZXhwIjoxNjg0MjQzMTc1fQ.qsVjU4pe3-PVjlT6gblYk1Kc46qqc7DkwAvVYIH-uz8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"ellla\",\r\n    \"email\": \"asfasf\",\r\n    \"cidadeId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/pessoas/3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"pessoas",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Pessoas  by id Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "auth",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NWE0ODU2NmNiNjcyZmEwYTg0ZmM3ZiIsImlhdCI6MTY4MzYzODM3NSwiZXhwIjoxNjg0MjQzMTc1fQ.qsVjU4pe3-PVjlT6gblYk1Kc46qqc7DkwAvVYIH-uz8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/pessoas/4",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"pessoas",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Pessoas Id Copy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{auth}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/pessoas/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"pessoas",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Pessoas Copy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "{{auth}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/pessoas",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"pessoas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Pessoas filters Copy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "auth",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NWE0ODU2NmNiNjcyZmEwYTg0ZmM3ZiIsImlhdCI6MTY4MzYzODM3NSwiZXhwIjoxNjg0MjQzMTc1fQ.qsVjU4pe3-PVjlT6gblYk1Kc46qqc7DkwAvVYIH-uz8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/pessoas?page=2&limit=1&filter=",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"pessoas"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "2"
+								},
+								{
+									"key": "limit",
+									"value": "1"
+								},
+								{
+									"key": "filter",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		},
 		{
 			"name": "Cities",
@@ -38,12 +310,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5051/cidades",
-							"protocol": "http",
+							"raw": "{{base_url}}/cidades",
 							"host": [
-								"localhost"
+								"{{base_url}}"
 							],
-							"port": "5051",
 							"path": [
 								"cidades"
 							]
@@ -72,12 +342,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5051/cidades/3",
-							"protocol": "http",
+							"raw": "{{base_url}}/cidades/3",
 							"host": [
-								"localhost"
+								"{{base_url}}"
 							],
-							"port": "5051",
 							"path": [
 								"cidades",
 								"3"
@@ -107,12 +375,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5051/cidades/1",
-							"protocol": "http",
+							"raw": "{{base_url}}/cidades/1",
 							"host": [
-								"localhost"
+								"{{base_url}}"
 							],
-							"port": "5051",
 							"path": [
 								"cidades",
 								"1"
@@ -145,12 +411,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5051/cidades/2",
-							"protocol": "http",
+							"raw": "{{base_url}}/cidades/2",
 							"host": [
-								"localhost"
+								"{{base_url}}"
 							],
-							"port": "5051",
 							"path": [
 								"cidades",
 								"2"
@@ -183,12 +447,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5051/cidades",
-							"protocol": "http",
+							"raw": "{{base_url}}/cidades",
 							"host": [
-								"localhost"
+								"{{base_url}}"
 							],
-							"port": "5051",
 							"path": [
 								"cidades"
 							]
@@ -220,12 +482,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5051/cidades?page=1&limit=200&filter=",
-							"protocol": "http",
+							"raw": "{{base_url}}/cidades?page=1&limit=200&filter=",
 							"host": [
-								"localhost"
+								"{{base_url}}"
 							],
-							"port": "5051",
 							"path": [
 								"cidades"
 							],
@@ -242,203 +502,6 @@
 									"key": "filter",
 									"value": ""
 								}
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "New Folder",
-			"item": [
-				{
-					"name": "Index do projeto(token)",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "auth",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NWE0ODU2NmNiNjcyZmEwYTg0ZmM3ZiIsImlhdCI6MTY4MzYzODM3NSwiZXhwIjoxNjg0MjQzMTc1fQ.qsVjU4pe3-PVjlT6gblYk1Kc46qqc7DkwAvVYIH-uz8",
-								"type": "text",
-								"disabled": true
-							}
-						],
-						"url": {
-							"raw": "{{base_url}}",
-							"host": [
-								"{{base_url}}"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Index do projeto(token)",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "auth",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NWE0ODU2NmNiNjcyZmEwYTg0ZmM3ZiIsImlhdCI6MTY4MzYzODM3NSwiZXhwIjoxNjg0MjQzMTc1fQ.qsVjU4pe3-PVjlT6gblYk1Kc46qqc7DkwAvVYIH-uz8",
-								"type": "text"
-							}
-						],
-						"url": {
-							"raw": "{{base_url}}/",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								""
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Get Users",
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "auth",
-								"value": "{{auth}}",
-								"type": "text"
-							}
-						],
-						"url": {
-							"raw": "{{base_url}}/users",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"users"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Post Users",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"email\": \"jose2@pedro.com\",\r\n    \"password\": \"1232\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{base_url}}/users",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"users"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Post User Get Token(Login)",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "auth",
-								"value": "{{auth}}",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"email\": \"jose2@pedro.com\",\r\n    \"password\": \"1\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{base_url}}/users/auth",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"users",
-								"auth"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Delete User by email",
-					"request": {
-						"method": "DELETE",
-						"header": [
-							{
-								"key": "auth",
-								"value": "{{auth}}",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"email\": \"jose@pedro.com\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{base_url}}/users/",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"users",
-								""
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Put User",
-					"request": {
-						"method": "PUT",
-						"header": [
-							{
-								"key": "auth",
-								"value": "{{auth}}",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"email\": \"jose2@pedro.com\",\r\n    \"password\": \"1\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{base_url}}/users/",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"users",
-								""
 							]
 						}
 					},
@@ -470,12 +533,12 @@
 	"variable": [
 		{
 			"key": "base_url",
-			"value": "https://jeangondorek-laughing-tribble-w9j9rr9vr5v2pgg-3333.preview.app.github.dev/",
+			"value": "http://localhost:5051",
 			"type": "string"
 		},
 		{
 			"key": "auth",
-			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NWE1Zjc1M2JmMmJjMzc3NDRlNmUxNSIsImlhdCI6MTY4MzY0NTc3OSwiZXhwIjoxNjg0MjUwNTc5fQ.lIy3ySexx5PMtXQpM2hev17evID0wYXi44gmftMUEzk",
+			"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEsImlhdCI6MTY4NDE2NzMyOSwiZXhwIjoxNjg0MTcwMzI5fQ.ZTcL6yZ02eQwHM32ql2Xm6HTOSdEniIkLH-PCtozADo",
 			"type": "string"
 		}
 	]

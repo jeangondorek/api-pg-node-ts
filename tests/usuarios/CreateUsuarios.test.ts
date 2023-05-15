@@ -14,24 +14,13 @@ afterAll(async () => {
 
 describe('Cidades - Create', () => {
 
-	let accessToken = '';
-	beforeAll(async () => {
-		const email = 'create-cidades@gmail.com';
-		await testServer.post('/cadastrar').send({
-			nome: 'teste', email, senha: '1234567'
-		});
-		const singInRes = await testServer.post('/entrar').send({email, senha: '1234567'});
-
-		accessToken = singInRes.body.accessToken;
-	});
-	
-
 	it('Cria registro', async ()=> {
 
 		const res1 = await testServer
-			.post('/cidades')
-			.set({Authorization: `Bearer ${accessToken}`})
-			.send({ nome: 'Caxias'});
+			.post('/cadastrar')
+			.send({ nome: 'hhhh',
+				email: 'hhhh1hh',
+				senha: 'hhh@hhh1h'});
 
 		expect(res1.statusCode).toEqual(StatusCodes.CREATED);
 		expect(typeof res1.body).toEqual('number');
@@ -40,12 +29,12 @@ describe('Cidades - Create', () => {
 	it('Tenta criar registro com nome muito curto', async ()=> {
 
 		const res1 = await testServer
-			.post('/cidades')
-			.set({Authorization: `Bearer ${accessToken}`})
-			.send({ nome: 'Ca'});
+			.post('/cadastrar').send({ nome: 'hhh',
+				email: 'hhhh',
+				senha: 'hhhhhhh'});
 
 		expect(res1.statusCode).toEqual(StatusCodes.BAD_REQUEST);
-		expect(res1.body).toHaveProperty('errors.body.nome');
+		expect(res1.body).toHaveProperty('errors.body.email');
 	});
 });
 
