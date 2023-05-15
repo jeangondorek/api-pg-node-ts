@@ -12,12 +12,17 @@ afterAll(async () => {
 });
 
 describe('Pessoas - Get by Id', () => {
+	let cidadeId: number | undefined = undefined;
+	beforeAll(async ()=>{
+		const resCidade = await testServer.post('/cidades').send({nome: 'teste'});
 
+		cidadeId = resCidade.body;
+	});
 	it('Get by id registro', async ()=> {
 
 		const res2 = await testServer
 			.post('/pessoas')
-			.send({ nome: 'Pedro', email: 'jsose', cidadeId: 1});
+			.send({ nome: 'Pedro', email: 'jsose', cidadeId});
 
 		expect(res2.statusCode).toEqual(StatusCodes.CREATED);
 
@@ -29,12 +34,6 @@ describe('Pessoas - Get by Id', () => {
 	});
 
 	it('Get by id de registro que não existe', async ()=> {
-
-		const res2 = await testServer
-			.post('/pessoas')
-			.send({ nome: 'Pedro', email: 'jsose', cidadeId: 1});
-
-		expect(res2.statusCode).toEqual(StatusCodes.CREATED);
 
 		const res1 = await testServer
 			.get('/pessoas/99999999').send();

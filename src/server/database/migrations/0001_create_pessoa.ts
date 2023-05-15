@@ -8,7 +8,7 @@ export async function up(knex: Knex) {
 		createTable(ETablesNames.pessoa, table =>{
 			table.bigIncrements('id').primary().index();
 			table.string('nome').checkLength('<=', 150).index().notNullable();
-			table.string('email').index().notNullable();
+			table.string('email').index().unique().notNullable();
 			table.bigInteger('cidadeId').index().notNullable().references('id').inTable(ETablesNames.cidade).onUpdate('CASCADE').onDelete('RESTRICT');
 
 			table.comment('tabela usada para armazenar pessoa');

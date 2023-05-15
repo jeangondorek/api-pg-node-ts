@@ -12,11 +12,17 @@ afterAll(async () => {
 });
 
 describe('Pessoas - Get All', () => {
+	let cidadeId: number | undefined = undefined;
+	beforeAll(async ()=>{
+		const resCidade = await testServer.post('/cidades').send({nome: 'teste'});
 
+		cidadeId = resCidade.body;
+	});
+	
 	it('Get all registers', async ()=> {
 		const res1 = await testServer
 			.post('/pessoas')
-			.send({ nome: 'Pedro', email: 'jsose', cidadeId: 1});
+			.send({ nome: 'Pedro', email: 'jsose', cidadeId});
 
 		expect(res1.statusCode).toEqual(StatusCodes.CREATED);
 

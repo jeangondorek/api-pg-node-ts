@@ -12,11 +12,16 @@ afterAll(async () => {
 });
 
 describe('Pessoas - Delete', () => {
+	let cidadeId: number | undefined = undefined;
+	beforeAll(async ()=>{
+		const resCidade = await testServer.post('/cidades').send({nome: 'teste'});
 
+		cidadeId = resCidade.body;
+	});
 	it('Delete registro', async ()=> {
 		const res2 = await testServer
 			.post('/pessoas')
-			.send({ nome: 'Pedro', email: 'jsose', cidadeId: 1});
+			.send({ nome: 'Pedro', email: 'jsose', cidadeId});
 
 		expect(res2.statusCode).toEqual(StatusCodes.CREATED);
 
