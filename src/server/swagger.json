@@ -1,0 +1,319 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+      "title": "Minha API",
+      "version": "1.0.0"
+    },
+      "security": [
+        {
+          "bearerAuth": []
+        }
+      ],
+    "paths": {
+      "/cidades": {
+        "get": {
+          "tags": ["Cidades"],
+          "summary": "Get all cities",
+          "security": [{"bearerAuth": []}],
+          "responses": {
+            "200": {
+              "description": "OK"
+            }
+          }
+        },
+        "post": {
+          "tags": ["Cidades"],
+          "summary": "Create a city",
+          "security": [{"bearerAuth": []}],
+          "requestBody": {
+            "description": "City object",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/City"
+                }
+              }
+            }
+          },
+          "responses": {
+            "default": {
+              "description": "Successful operation"
+            }
+          }
+        }
+      },
+      "/cidades/{id}": {
+        "get": {
+          "tags": ["Cidades"],
+          "summary": "Get a city by ID",
+          "security": [{"bearerAuth": []}],
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "description": "ID of the city"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK"
+            }
+          }
+        },
+        "put": {
+          "tags": ["Cidades"],
+          "summary": "Update a city by ID",
+          "security": [{"bearerAuth": []}],
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "description": "ID of the city"
+            }
+          ],
+          "requestBody": {
+            "description": "Updated city object",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/City"
+                }
+              }
+            }
+          },
+          "responses": {
+            "default": {
+              "description": "Successful operation"
+            }
+          }
+        },
+        "delete": {
+          "tags": ["Cidades"],
+          "summary": "Delete a city by ID",
+          "security": [{"bearerAuth": []}],
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "description": "ID of the city"
+            }
+          ],
+          "responses": {
+            "default": {
+              "description": "Successful operation"
+            }
+          }
+        }
+      },
+      "/pessoas": {
+        "get": {
+          "tags": ["Pessoas"],
+          "summary": "Get all people",
+          "security": [{"bearerAuth": []}],
+          "responses": {
+            "200": {
+              "description": "OK"
+            }
+          }
+        },
+        "post": {
+          "tags": ["Pessoas"],
+          "summary": "Create a person",
+          "security": [{"bearerAuth": []}],
+          "requestBody": {
+            "description": "Person object",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Person"
+                }
+              }
+            }
+          },
+          "responses": {
+            "default": {
+              "description": "Successful operation"
+            }
+          }
+        }
+      },
+      "/pessoas/{id}": {
+        "get": {
+          "tags": ["Pessoas"],
+          "summary": "Get a person by ID",
+          "security": [{"bearerAuth": []}],
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "description": "ID of the person"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK"
+            }
+          }
+        },
+        "put": {
+          "tags": ["Pessoas"],
+          "summary": "Update a person by ID",
+          "security": [{"bearerAuth": []}],
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "description": "ID of the person"
+            }
+          ],
+          "requestBody": {
+            "description": "Updated person object",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Person"
+                }
+              }
+            }
+          },
+          "responses": {
+            "default": {
+              "description": "Successful operation"
+            }
+          }
+        },
+        "delete": {
+          "tags": ["Pessoas"],
+          "summary": "Delete a person by ID",
+          "security": [{"bearerAuth": []}],
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "description": "ID of the person"
+            }
+          ],
+          "responses": {
+            "default": {
+              "description": "Successful operation"
+            }
+          }
+        }
+      },
+      "/cadastrar": {
+        "post": {
+          "tags": ["Usuarios"],
+          "summary": "Sign up",
+          "requestBody": {
+            "description": "User object",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/User"
+                }
+              }
+            }
+          },
+          "responses": {
+            "default": {
+              "description": "Successful operation"
+            }
+          }
+        }
+      },
+      "/entrar": {
+        "post": {
+          "tags": ["Usuarios"],
+          "summary": "Sign in",
+          "requestBody": {
+            "description": "Credentials object",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Credentials"
+                }
+              }
+            }
+          },
+          "responses": {
+            "default": {
+              "description": "Successful operation"
+            }
+          }
+        }
+      }
+    },
+    "components": {
+        "securitySchemes": {
+            "bearerAuth": {
+              "type": "http",
+              "scheme": "bearer",
+              "bearerFormat": "JWT"
+            }},
+      "schemas": {
+        "City": {
+          "type": "object",
+          "properties": {
+            "nome": {
+              "type": "string"
+            },
+            "id": {
+              "type": "number"
+            }
+          }
+        },
+        "Person": {
+          "type": "object",
+          "properties": {
+            "nome": {
+              "type": "string"
+            },
+            "id": {
+              "type": "number"
+            },
+            "email": {
+              "type": "string"
+            },
+            "cidadeId": {
+              "type": "number"
+            }
+          }
+        },
+        "User": {
+          "type": "object",
+          "properties": {
+            "nome": {
+              "type": "string"
+            },
+            "id": {
+              "type": "number"
+            },
+            "email": {
+              "type": "string"
+            },
+            "senha": {
+              "type": "string"
+            }
+          }
+        },
+        "Credentials": {
+          "type": "object",
+          "properties": {
+            "email": {
+              "type": "string"
+            },
+            "senha": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+  
