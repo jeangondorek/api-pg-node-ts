@@ -72,14 +72,14 @@
 						"method": "POST",
 						"header": [
 							{
-								"key": "authorization",
+								"key": "Authorization",
 								"value": "{{auth}}",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nome\": \"sss\",\r\n    \"email\": \"asfasf\",\r\n    \"cidadeId\": 14\r\n}",
+							"raw": "{\r\n    \"nome\": \"sss\",\r\n    \"email\": \"asfwssasf\",\r\n    \"cidadeId\": 1\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -104,8 +104,8 @@
 						"method": "PUT",
 						"header": [
 							{
-								"key": "auth",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NWE0ODU2NmNiNjcyZmEwYTg0ZmM3ZiIsImlhdCI6MTY4MzYzODM3NSwiZXhwIjoxNjg0MjQzMTc1fQ.qsVjU4pe3-PVjlT6gblYk1Kc46qqc7DkwAvVYIH-uz8",
+								"key": "Authorization",
+								"value": "{{auth}}",
 								"type": "text"
 							}
 						],
@@ -137,8 +137,8 @@
 						"method": "DELETE",
 						"header": [
 							{
-								"key": "auth",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NWE0ODU2NmNiNjcyZmEwYTg0ZmM3ZiIsImlhdCI6MTY4MzYzODM3NSwiZXhwIjoxNjg0MjQzMTc1fQ.qsVjU4pe3-PVjlT6gblYk1Kc46qqc7DkwAvVYIH-uz8",
+								"key": "Authorization",
+								"value": "{{auth}}",
 								"type": "text"
 							}
 						],
@@ -173,7 +173,7 @@
 						"method": "GET",
 						"header": [
 							{
-								"key": "authorization",
+								"key": "Authorization",
 								"value": "{{auth}}",
 								"type": "text"
 							}
@@ -209,7 +209,7 @@
 						"method": "GET",
 						"header": [
 							{
-								"key": "authorization",
+								"key": "Authorization",
 								"value": "{{auth}}",
 								"type": "text"
 							}
@@ -244,8 +244,8 @@
 						"method": "GET",
 						"header": [
 							{
-								"key": "auth",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NWE0ODU2NmNiNjcyZmEwYTg0ZmM3ZiIsImlhdCI6MTY4MzYzODM3NSwiZXhwIjoxNjg0MjQzMTc1fQ.qsVjU4pe3-PVjlT6gblYk1Kc46qqc7DkwAvVYIH-uz8",
+								"key": "Authorization",
+								"value": "{{auth}}",
 								"type": "text"
 							}
 						],
@@ -295,8 +295,8 @@
 						"method": "POST",
 						"header": [
 							{
-								"key": "auth",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NWE0ODU2NmNiNjcyZmEwYTg0ZmM3ZiIsImlhdCI6MTY4MzYzODM3NSwiZXhwIjoxNjg0MjQzMTc1fQ.qsVjU4pe3-PVjlT6gblYk1Kc46qqc7DkwAvVYIH-uz8",
+								"key": "Authorization",
+								"value": "{{auth}}",
 								"type": "text"
 							}
 						],
@@ -327,8 +327,8 @@
 						"method": "PUT",
 						"header": [
 							{
-								"key": "auth",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NWE0ODU2NmNiNjcyZmEwYTg0ZmM3ZiIsImlhdCI6MTY4MzYzODM3NSwiZXhwIjoxNjg0MjQzMTc1fQ.qsVjU4pe3-PVjlT6gblYk1Kc46qqc7DkwAvVYIH-uz8",
+								"key": "Authorization",
+								"value": "{{auth}}",
 								"type": "text"
 							}
 						],
@@ -360,8 +360,8 @@
 						"method": "DELETE",
 						"header": [
 							{
-								"key": "auth",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NWE0ODU2NmNiNjcyZmEwYTg0ZmM3ZiIsImlhdCI6MTY4MzYzODM3NSwiZXhwIjoxNjg0MjQzMTc1fQ.qsVjU4pe3-PVjlT6gblYk1Kc46qqc7DkwAvVYIH-uz8",
+								"key": "Authorization",
+								"value": "{{auth}}",
 								"type": "text"
 							}
 						],
@@ -396,8 +396,8 @@
 						"method": "GET",
 						"header": [
 							{
-								"key": "auth",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NWE0ODU2NmNiNjcyZmEwYTg0ZmM3ZiIsImlhdCI6MTY4MzYzODM3NSwiZXhwIjoxNjg0MjQzMTc1fQ.qsVjU4pe3-PVjlT6gblYk1Kc46qqc7DkwAvVYIH-uz8",
+								"key": "Authorization",
+								"value": "{{auth}}",
 								"type": "text"
 							}
 						],
@@ -432,8 +432,8 @@
 						"method": "GET",
 						"header": [
 							{
-								"key": "auth",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NWE0ODU2NmNiNjcyZmEwYTg0ZmM3ZiIsImlhdCI6MTY4MzYzODM3NSwiZXhwIjoxNjg0MjQzMTc1fQ.qsVjU4pe3-PVjlT6gblYk1Kc46qqc7DkwAvVYIH-uz8",
+								"key": "Authorization",
+								"value": "{{auth}}",
 								"type": "text"
 							}
 						],
@@ -467,8 +467,8 @@
 						"method": "GET",
 						"header": [
 							{
-								"key": "auth",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NWE0ODU2NmNiNjcyZmEwYTg0ZmM3ZiIsImlhdCI6MTY4MzYzODM3NSwiZXhwIjoxNjg0MjQzMTc1fQ.qsVjU4pe3-PVjlT6gblYk1Kc46qqc7DkwAvVYIH-uz8",
+								"key": "Authorization",
+								"value": "{{auth}}",
 								"type": "text"
 							}
 						],
@@ -538,7 +538,7 @@
 		},
 		{
 			"key": "auth",
-			"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEsImlhdCI6MTY4NDE2NzMyOSwiZXhwIjoxNjg0MTcwMzI5fQ.ZTcL6yZ02eQwHM32ql2Xm6HTOSdEniIkLH-PCtozADo",
+			"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOjEsImlhdCI6MTY4NDMyNTM2MCwiZXhwIjoxNjg0MzI4MzYwfQ.z39dJPvKAUXZ1fPUP1G2TdO8Qepqy0qXGjV1VGvWIB0",
 			"type": "string"
 		}
 	]
