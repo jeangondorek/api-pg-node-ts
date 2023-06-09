@@ -67,6 +67,9 @@ npx eslint --init
 - models - contém os modelos de dados
 - migrations - comandos/funções executadas no banco de dados
 
-New branch dev using elephantSQL
+### New branch dev using elephantSQL
+
+- [ ] Need to remove .env when make commit
+- [ ] Need to create a new database
 
 https://api.elephantsql.com/console/e2b100a0-0544-4630-9bf8-95c33dc4bff5/details
